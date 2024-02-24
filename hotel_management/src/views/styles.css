@@ -1,0 +1,35 @@
+img{
+    max-width:110.2px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+p{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+a{
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+td{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+table{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+    margin-top: auto;
+}
