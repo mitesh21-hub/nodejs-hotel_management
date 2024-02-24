@@ -1,6 +1,5 @@
 const Models = require("../../models");
 const Sequelize = require("sequelize");
-// const { sequelize } = require("../../models");
 const Op = Sequelize.Op;
 
 const apiResponse = require("../../services/apiResponse.js");
@@ -53,32 +52,32 @@ module.exports = {
    * @param req
    * @param res
    */
-  // searchRooms: async (req, res) => {
-  //   try {
+  searchRooms: async (req, res) => {
+    try {
 
-  //     const page = req.query.page;
-  //     const limit = req.query.limit || 3;
-  //     const offset = page ? (page-1) * limit : 0;
-  //     const searchData = {};
-  //     const { room_type, room_amenities } = req.query;
-  //     if (room_type) searchData.room_type = {
-  //       [Op.like]: `%${room_type}%`
-  //     }
-  //     if (room_amenities) searchData.room_amenities = {
-  //       [Op.like]: `%${room_amenities}%`
-  //     }
-  //     const data = await Models.Rooms.findAll({
-  //       offset: offset,
-  //       limit: limit,
-  //       where:{
-  //         ...searchData,
-  //       }
-  //     });
-  //     return apiResponse.successResponseData(res, data);
-  //   } catch (e) {
-  //     return apiResponse.errorResponseData(res, e);
-  //   }
-  // },
+      const page = req.query.page;
+      const limit = req.query.limit || 3;
+      const offset = page ? (page-1) * limit : 0;
+      const searchData = {};
+      const { room_type, room_amenities } = req.query;
+      if (room_type) searchData.room_type = {
+        [Op.like]: `%${room_type}%`
+      }
+      if (room_amenities) searchData.room_amenities = {
+        [Op.like]: `%${room_amenities}%`
+      }
+      const data = await Models.Rooms.findAll({
+        offset: offset,
+        limit: limit,
+        where:{
+          ...searchData,
+        }
+      });
+      return apiResponse.successResponseData(res, data);
+    } catch (e) {
+      return apiResponse.errorResponseData(res, e);
+    }
+  },
 
   /**
    * @description this function for get room from the roomId.
