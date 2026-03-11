@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var IndexRoute = (0, express_1.Router)();
+var formidablewere = require('express-formidable');
+var express = require("express");
+var app = express();
+IndexRoute.use(formidablewere());
+// const UserRoute = require("./UserRouter");
+// const authenticationRoute = require("./authenticationRouter");
+var hotelRoutes_1 = require("./hotelRoutes");
+// const HotelRoomsRoute = require("./HotelRoomsRouter");
+var roomRouter_1 = require("./roomRouter");
+var bookingRoutes_1 = require("./bookingRoutes");
+var contactRoutes_1 = require("./contactRoutes");
+// const BookingRoute = require("./BookingRouter");
+// IndexRoute.use("/api/v1/user", authRoute);
+// IndexRoute.use("/api/v1/authenticate/user", authenticationRoute);
+IndexRoute.use("/api/v1/hotels", hotelRoutes_1.default);
+IndexRoute.use("/api/v1/rooms", roomRouter_1.default);
+IndexRoute.use("/api/v1/bookings", bookingRoutes_1.default);
+IndexRoute.use("/api/v1/contact", contactRoutes_1.default);
+exports.default = IndexRoute;
+//# sourceMappingURL=indexRoutes.js.map
