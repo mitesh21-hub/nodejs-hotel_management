@@ -1,0 +1,40 @@
+{
+  "name": "hotel_management",
+  "version": "1.0.0",
+  "description": "Hotel management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mitesh",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-formidable": "^1.2.0",
+    "express-paginate": "^1.0.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.8",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "password-validator": "^5.3.0",
+    "pug": "^3.0.2",
+    "sequelize": "^6.21.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.4.1"
+  }
+}

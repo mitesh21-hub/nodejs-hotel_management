@@ -1,0 +1,19 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "mind",
+    "database": "hotel_management_ts",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+       "src/entity/**/*.ts"
+    ],
+    "migrations": [
+       "src/migration/"
+    ],
+    "subscribers": [
+       "src/subscriber/"
+    ]
+ }
